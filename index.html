@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+   
+    <style>
+        body{
+            background-image: url(img/timg.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 135%;
+        }
+        #container{
+            margin: 200px auto;
+            width: 500px;
+            border: 1px solid black;
+            text-align: center;
+            background-color: rgba(0,0,0,0.2);
+        }
+        #login{
+            width: 80px;
+            margin-bottom: 20px;
+            margin-right: 15px;
+            border-radius: 8px;
+        }
+        #reset{
+            width: 80px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+       #login:hover,#reset:hover{
+           background-color:blue;
+       }
+       #login:active,#reset:active{
+           background-color:#ccc;
+       }
+    </style>
+    <script>
+        window.onload=function(){
+            var login=document.getElementById("login");
+            var reset=document.getElementById("reset");
+            login.onclick=function(){
+                alert("登录成功")
+            }
+            reset.onclick=function(){
+                alert("重置成功")
+            }
+            }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>login</h1>
+        <form action="#">
+            <label for="user">账号：</label>
+            <input type="text" id="user" placeholder="username" title="请输入账号">
+            <br>
+            <br>
+            <label for="pwd">密码：</label>
+            <input type="password" id="pwd" placeholder="password" title="请输入密码">
+            <br>
+            <br>
+            <input type="submit" value="登录" id="login">
+            <input type="reset" value="重置" id="reset">
+        </form>
+    </div>
+</body>
+</html>
